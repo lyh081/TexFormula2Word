@@ -1,15 +1,29 @@
 body {
-    width: 200px;
+    width: 500px;
     margin: 5px;
     padding: 0;
     border: 0;
-    background-color: #ddd;
 }
 textarea {
     width: 98%;
-    min-height: 100px;
+    min-height: 60px;
     padding: 1%;
-    border: 0 none;
-    outline: none;
+    border: 1 none;
+    border-radius: 10px;
     text-align: left;
+}
+
+.btn button{
+    line-height: 15px;
+    font-size: 12px;
+    padding: 5px;
+    margin: 2px;
+    background-color: #4e6ef2;
+    color: #FFF;
+    border: 0 none;
+    border-radius:4px 4px 4px 4px;
+}
+
+.title {
+    font-size: 16px;
 }
