@@ -1,0 +1,15 @@
+body {
+    width: 200px;
+    margin: 5px;
+    padding: 0;
+    border: 0;
+    background-color: #ddd;
+}
+textarea {
+    width: 98%;
+    min-height: 100px;
+    padding: 1%;
+    border: 0 none;
+    outline: none;
+    text-align: left;
+}

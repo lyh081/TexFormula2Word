@@ -1,2 +1,3 @@
-# Tex2MathML
-chrome extensions toconvert Tex to MathML
+# TexFormula2Word
+
+Convert Tex to MathML which can be copied into MS Word.

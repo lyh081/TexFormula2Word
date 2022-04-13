@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-redeviation-bs-uid="88480"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Latex公式转Word</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div>
+    <!--    左边部分-->
+    <div class="left_content">
+        <p class="content-title">请在下面的输入框内输入Latex公式</p>
+        <div class="text">
+            <label>
+                <textarea id="input" style="height: 60px" spellcheck="false" placeholder="Latex...">\sqrt[8]{\frac{3\times a}{2}}</textarea>
+            </label>
+        </div>
+        <div id="preview"><pre></pre></div>
+        <div class="btn">
+            <button id="render">转换并复制</button>
+            <button id="newpage">在新标签中打开</button>
+        </div>
+        <hr>
+        <p class="result-title">MathML结果</p>
+        <div class="text">
+            <label>
+                <textarea id="output" spellcheck="false" placeholder="Result..."></textarea>
+            </label>
+        </div>
+    </div>
+</div>
+<script src="js/mathjax-config.js" defer=""></script>
+<script src="js/tex-mml-chtml.js"></script>
+<script src="js/popup.js"></script>
+</body>
