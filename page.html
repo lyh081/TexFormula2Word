@@ -6,24 +6,25 @@
 </head>
 <body>
     <div>
-        <p class="title">输入Latex公式</p>
-        <div class="text">
+        <p class="title">输入Latex公式:</p>
+        <div class="text" id="lt">
             <label>
                 <textarea id="input" style="height: 60px" spellcheck="false" placeholder="Latex...">x_u = M^\top \cdot u'</textarea>
             </label>
         </div>
-        <div class="btn">
+        <div class="btn" id="rt">
             <button id="render">转换并复制</button>
-            <button id="newpage">在新标签中打开</button>
         </div>
-        <p class="title">MathML结果</p>
+    </div>
+    <div>
+        <p class="title">MathML结果:</p>
         <div class="text">
             <label>
                 <textarea id="output" spellcheck="false" placeholder="Result..."></textarea>
             </label>
         </div>
     </div>
-    <script src="js/mathjax-config.js" defer=""></script>
-    <script src="js/tex-mml-chtml.js"></script>
-    <script src="js/popup.js"></script>
+    
+    <script src="tex-mml-chtml.js"></script>
+    <script src="popup.js"></script>
 </body>

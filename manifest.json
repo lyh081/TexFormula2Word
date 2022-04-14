@@ -1,14 +1,11 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "TexFormula2Word",
     "version": "1.0",
     "description": "Convert Tex to MathML which can be copied into MS Word.",
     "background": {
-        "scripts": [
-            "js/tex-mml-chtml.js",
-            "js/toword.js",
-            "js/background.js"
-        ]
+        "service_worker": "background.js",
+        "type": "module"
     },
     "icons": {
         "16": "images/icon16.png",
@@ -19,12 +16,19 @@
         "contextMenus",
         "activeTab"
     ],
-    "browser_action": {
+    "action": {
         "default_icon": {
             "16": "images/icon16.png",
             "32": "images/icon32.png",
             "64": "images/icon64.png"
         },
         "default_popup": "page.html"
-    }
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["tex-mml-chtml.js","toword.js"]
+        }
+      ]
 }

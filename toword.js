@@ -1,22 +1,22 @@
-chrome.contextMenus.create({
-    'type':'normal',
-    'title':'Tex2Word',
-    'contexts':['selection'],
-    'id':'cn',
-    'onclick':toWord
-});
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        sendResponse({message: toMathML(request.latex)});
+    }
+  );
 
-function toWord(info) {
-    input = info.selectionText.trim()
+function toMathML(info) {
+    input = info.trim()
     MathJax.texReset();
     mml = MathJax.tex2mml(input);
     if(mml.includes("merror")){
-        let message = mml.split("<mtext>")[1].split("</mtext>")[0]
-        alert( "错误:{" + message +"}, 请检查所选Tex公式");
+        var message = "错误:{" + mml.split("<mtext>")[1].split("</mtext>")[0] + "}, 请检查所选Tex公式" ;
     }else{
         copyText(mml);
-        alert("已经复制到剪贴板,请到Word中粘贴");
+        var message = "已经复制到剪贴板,请到Word中粘贴";
+        
     }
+    alert(message);
+    return message;
 }
 
 function copyText(value) {
