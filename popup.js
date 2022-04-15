@@ -42,8 +42,3 @@ function copyText() {
     // 执行浏览器复制命令
     document.execCommand("Copy")
 }
-
-let newpage = document.getElementById("newpage");
-newpage.addEventListener("click", function(){
-    chrome.tabs.create({url: 'http://web.xiaoyv.top/web/LatexToMathML/'});
-});
